@@ -31,6 +31,7 @@
 
 
 
+
 %% Opciones del posgrado (descomentar si las necesitan)
 	%\posgradotrue                                                    
 	%\programa{programa de maestría y doctorado en fisica}
@@ -47,6 +48,16 @@
 	%\supdos{Dr. 5}
 	%\institucion{BUAP FCFM}
 
+\asesor{}               % Nombre del asesor
+\presidente{} % Nombre del presidente del jurado
+\secretario{}       % Nombre del secretario del jurado
+\vocala{}         % Nombre del 1er vocal del jurado
+\vocalb{}    
+
+
+\keywords{tesis,autor,tutor,etc}            % Palablas clave para los metadatos del PDF
+\subject{tema_1,tema_2}                     % Tema para metadatos del PDF 
+
 \keywords{tesis,autor,tutor,etc}            % Palablas clave para los metadatos del PDF
 \subject{tema_1,tema_2}                     % Tema para metadatos del PDF  
 
@@ -56,7 +67,8 @@
 \begin{document}
 
 \maketitle									% Se redefinió este comando en el archivo de la clase para generar automáticamente la portada a partir de los datos
-
+%Acta de Comite. Comentar si no te utiliza
+\makeacta
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                  PRÓLOGO                          %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
