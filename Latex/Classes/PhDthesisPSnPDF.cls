@@ -337,7 +337,7 @@
 	\begin{alwayssingle}
 	\thispagestyle{empty}	
 	\begin{center}
-	\includegraphics[height=3cm]{Latex/Classes/Escudos/unam_azul_5x5cm}\\[8mm]
+	\includegraphics[height=3cm]{Latex/Classes/Escudos/umsnh-color}\\[8mm]
 	{\bfseries BENEMERITA~UNIVERSIDAD~AUTONOMA~DE~PUEBLA}\\
 	{\MakeUppercase {\@programa}}\\
 	{\MakeUppercase {\@campo}}\\[20mm]
@@ -402,17 +402,17 @@
 	\begin{minipage}[c][10cm][s]{3cm}
 	  \begin{center}
 	    \ifportada
-	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_azul_5x5cm}\\[10pt]
+	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/umsnh-color}\\[10pt]
     	    \hskip2pt\colorvrule{Azul}{2.5pt}{15cm}
         	\hskip -0.4mm
 	        \colorvrule{Oro}{1pt}{13cm}\\[10pt]
 	        \includegraphics[height=2.6cm]{\@escudofacultad}
 	    \else
-	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_negro_5x5cm}\\[10pt]
+	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/umsnh-color}\\[10pt]
 	        \hskip2pt\vrule width2.5pt height13cm
     	    \hskip1mm
 	        \vrule width1pt height13cm\\[10pt]
-	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_negro_5x5cm}
+	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/umsnh-color}
 	    \fi
     
 	  \end{center}

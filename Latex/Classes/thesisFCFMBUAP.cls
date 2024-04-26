@@ -25,7 +25,7 @@
 \usepackage{listings}                    % PERMITE AGREGAR CÓDIGO DE LENGUAJES  DE PROGRAMACIÓN (DOCUMENTACIÓN EN GOOGLE)
 \usepackage{emptypage}                   % QUITA LOS ENCABEZADOS Y PIES DE PÁGINA EN LAS HOJAS VACÍAS PRODUCIDAS POR LA IMPRESIÓN A DOS CARAS
 \usepackage{wrapfig}                    % to include figure with text wrapping around it
-\usepackage[margin=10pt,font=small,labelfont=bf]{caption} % for improved layout of figure captions with extra margin, smaller font than text
+ % for improved layout of figure captions with extra margin, smaller font than text
 \usepackage[bf,SL,BF]{subfigure}         % Permite crear figuras múltiples
 \usepackage{makeidx}                     % Contiene los macros para indexar en un glosario
 %\usepackage[style=list,toc,number=none]{glossary}
@@ -581,6 +581,88 @@
   \vspace{0.5cm}}
 {\vspace{1.5cm}\flushright{\@author. \@lugar, \@degreedate}\end{alwayssingle}}
 
+
+
+%%%%%%%%%%%%%%%%%%%%AGREGO HOY
+ \def\asesor#1{\gdef\@asesor{#1}}
+\def\@asesor{\@latex@warning@no@line{No me has dado al \noexpand\asesor}}
+\def\presidente#1{\gdef\@presidente{#1}}
+\def\@presidente{\@latex@warning@no@line{No me has dado al \noexpand\presidente}}
+\def\secretario#1{\gdef\@secretario{#1}}
+\def\@secretario{\@latex@warning@no@line{No me has dado al \noexpand\secretario}}
+\def\vocala#1{\gdef\@vocala{#1}}
+\def\@vocala{\@latex@warning@no@line{No me has dado al \noexpand\vocala}}
+\def\vocalb#1{\gdef\@vocalb{#1}}
+\def\@vocalb{\@latex@warning@no@line{No me has dado al \noexpand\vocalb}}
+\def\hombre{\gdef\@asesorad{Asesorado por}}
+\def\mujer{\gdef\@asesorad{Asesorada por}}
+\def\@asesorad{\@latex@warning@no@line{No se si eres hombre o mujer. %
+		Usa \@backslashchar hombre o \@backslashchar mujer}\stop}
+\def\trabajo{Tesis }
+\def\tesina{\renewcommand{\trabajo}{Tesina }}
+
+ \newcommand\makeacta{
+	\begin{titlepage}%
+		\def\@thanks{}%evita la ocurrencia de doble pie de página
+		\let\footnotesize\small
+		\let\footnoterule\relax
+		\let\footnote\thanks %\relax
+		%\let \mpfootnotetext{}
+		\null\vfill
+		%\vskip 60\p@
+		\begin{flushleft}%
+			{\large \textbf{T\'\i tulo:} \@title \par}
+			%\let\@thanks\relax
+			{\large \textbf{Estudiante:} \@author \par}%
+		\end{flushleft}%
+		
+		\vspace{1cm}
+		\begin{center}
+			\large
+			\textbf{COMIT\'E}
+			
+			\vspace{1cm}%
+			\rule{4cm}{1pt}%
+			
+			\@presidente
+			
+			\textbf{Presidente}
+			
+			\vspace{1cm}%
+			\rule{4cm}{1pt}%
+			
+			\@secretario
+			
+			\textbf{Secretario}
+			
+			\vspace{1cm}%
+			\rule{4cm}{1pt}%
+			
+			\@vocala
+			
+			\textbf{Vocal}
+			
+			\vspace{1cm}
+			\rule{4cm}{1pt}
+			
+			\@vocalb
+			
+			\textbf{Suplente}
+			
+			\vspace{1cm}%
+			\rule{4cm}{1pt}%
+			
+			\@asesor
+			
+			\textbf{Asesor}
+		\end{center}
+		\@thanks\par
+		\vfill\null
+		% \@thanks\par
+		%
+		%  {\@thanks\par}%
+	\end{titlepage}%
+}
 
 %:-------------------------- page numbers: roman+arabic -----------------------
 
